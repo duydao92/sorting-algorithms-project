@@ -49,8 +49,6 @@ function insertionSort(list) {
   return list
 }
 
-console.log(insertionSort([6,4,7,5,1,3,2,9,8]))
-
 module.exports = {
   insertionSort
 };
