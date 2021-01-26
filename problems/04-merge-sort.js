@@ -23,11 +23,13 @@ function merge(array1, array2) {
 console.log(merge([1,4,7,10], [4,6,8,10]))
 
 function mergeSort(array) {
-  if (array.length === 1) return array
+  if (array.length <= 1) return array
 
-  let midIdx = Math.floor(arr.length / 2)
+  let midIdx = Math.floor(array.length / 2)
   let leftHalf = array.slice(0, midIdx)
   let rightHalf = array.slice(midIdx)
+
+  return merge(mergeSort(leftHalf), mergeSort(rightHalf));
 }
 
 module.exports = {
