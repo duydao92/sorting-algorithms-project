@@ -1,12 +1,51 @@
 // Implement Selection Sort
 
 // Implement swap without looking at bubble sort
+
+
+
+// procedure selection sort
+// list: array of items
+// n: size of list
+
+// for i = 1 to n - 1
+//    /* set current element as minimum*/
+//       min = i
+
+// /* check the element to be minimum */
+
+// for j = i + 1 to n
+//          if list[j] < list[min] then
+// min = j;
+// end if
+//       end for
+
+//       /* swap the minimum element with the current element*/
+//       if indexMin != i  then
+// swap list[min] and list[i]
+// end if
+//    end for
+// end procedure
+
 function swap(arr, index1, index2) {
-  // your code here
+  let temp = arr[index1];
+  arr[index1] = arr[index2];
+  arr[index2] = temp;
 }
 
+
+
 function selectionSort(list) {
-  // your code here
+  for (let i = 0; i < list.length; i++) {
+    let min = i;
+    for (let j = i + 1; j < list.length; j++) {
+      if (list[j] < list[min]) {
+        min = j;
+        swap(list, i, min)
+      }
+    }
+  }
+  return list;
 }
 
 module.exports = {
